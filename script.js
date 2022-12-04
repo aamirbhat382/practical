@@ -243,7 +243,7 @@ form.addEventListener('submit', (event) => {
     />
     <img src="https://random.imagecdn.app/500/150" /><br>
     <h1>Table</h1>
-
+    <div class="pagebreak"> </div>
 <table>
   <tr>
     <th rowspan="2">Roll Number</th>
