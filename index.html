@@ -14,8 +14,20 @@
         <div class="card-body">
           <h5 class="card-title">The Project is Made by Your Classmate </h5>
           <p class="card-text">👏 Say, Thanks to Your Friend</p>
-          <a href="/pratical/form.html" class="btn btn-primary">Generate Practical File</a>
+          <a  id = "pass" href="#" class="btn btn-primary">Generate Practical File</a>
         </div>
       </div>
+      <script>
+        let pass = document.getElementById("pass")
+        pass.addEventListener("click", (e)=>{
+          let name ="@Aamirbhat382/4772"
+          let password = prompt("Please Enter Your Password")
+          if(password == name ){
+            pass.href ="/practical/form.html"
+          }else{
+            alert("Wrong Password")
+          }
+        })
+      </script>
 </body>
 </html>
