@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical Applied Computing</title>
+    <style>
+        /* Style for the image grid */
+        @media print {
+          .pagebreak {
+            page-break-before: always;
+          }
+          #printButton {
+                display: none;
+            }
+          /* page-break-after works, as well */
+        }
+        #printButton {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 5px;
+            cursor: pointer;
+        }
+        @page {
+            size: auto; /* Set the page size to auto to fit the content */
+            margin: 0; /* Set the margin to 0 to remove headers and footers */
+            
+        }
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        /* Style for the table cells (td and th) */
+        th, td {
+            padding: 8px;
+            text-align: center;
+            border: 1px solid #ccc; /* Add a border to all cells */
+        }
+
+        /* Style for the table rows (tr) */
+        tr {
+            border-bottom: 2px solid #ccc; /* Add a border at the bottom of each row */
+        }
+
+        /* Optional: Style for the table header (th) rows */
+        thead tr {
+            background-color: #f2f2f2; /* Add background color to header rows */
+            font-weight: bold; /* Make the text in header rows bold */
+        }
+
+        /* Style for each image */
+        .image {
+            width: 100%;
+            height: auto;
+            border: 1px solid #ccc;
+        }
+        </style>
+</head>
+<body>
+    <button id="printButton">Print Page</button>
+
+    <script>
+        // Button - Print Function
+        document.getElementById("printButton").addEventListener("click", function() {
+            window.print();
+        });
+</script>
+    <i>Web Page with links to different pages</i>
+    <h2>INPUT Practical (1)</h2>
+    <xmp>
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>My Website</title>
+    </head>
+    <body>
+        <h1>Welcome to My Website!</h1>
+        <p>Click on the links below to navigate to different pages:</p>
+    
+        <!-- Navigation Links -->
+        <ul>
+            <li><a href="page1.html">Page 1</a></li>
+            <li><a href="page2.html">Page 2</a></li>
+            <li><a href="page3.html">Page 3</a></li>
+        </ul>
+    </body>
+    </html>
+</xmp>
+<hr>
+<div class="pagebreak"> </div>
+<h2>OUTPUT Practical (1)</h2>
+<h1>Welcome to My Website!</h1>
+<p>Click on the links below to navigate to different pages:</p>
+<!-- Navigation Links -->
+<ul>
+    <li><a href="page1.html">Page 1</a></li>
+    <li><a href="page2.html">Page 2</a></li>
+    <li><a href="page3.html">Page 3</a></li>
+</ul>
+<hr>
+<div class="pagebreak"> </div>
+<i>Web Page With Images.</i>
+    <h2>INPUT Practical (2)</h2>
+    <xmp>
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Web Page With iImages</title>
+        </head>
+        <body>
+            <h1>Web Page with Imagesy</h1>
+            <div class="image">
+                <img src="image1.jpg" alt="Image 1">
+            </div>
+            <div class="image">
+                <img src="image2.jpg" alt="Image 2">
+            </div>
+            <div class="image">
+                <img src="image3.jpg" alt="Image 3">
+            </div>
+          
+        </body>
+        </html>
+        
+</xmp>
+
+<hr>
+<div class="pagebreak"> </div>
+<h2>OUTPUT Practical (2)</h2>
+<h1>Web Page with Images</h1>
+<div class="image-grid">
+    <div class="image">
+        <img src="https://picsum.photos/200/300" alt="Image 1">
+    </div>
+    <div class="image">
+        <img src="https://picsum.photos/200/250" alt="Image 2">
+    </div>
+    <div class="image">
+        <img src="https://picsum.photos/200" alt="Image 3">
+    </div>
+</div>
+<hr>
+<div class="pagebreak"></div>
+<i>User Registration Form</i>
+<h2>OUTPUT Practical (3)</h2>
+<xmp>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration Form</title>
+</head>
+<body>
+    <h1>User Registration</h1>
+    <form action="#" method="POST">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <br>
+
+        <label for="confirm-password">Confirm Password:</label>
+        <input type="password" id="confirm-password" name="confirm-password" required>
+        <br>
+
+        <label for="gender">Gender:</label>
+        <input type="radio" id="male" name="gender" value="male" required>
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female" required>
+        <label for="female">Female</label>
+        <input type="radio" id="other" name="gender" value="other" required>
+        <label for="other">Other</label>
+        <br>
+
+        <label for="country">Country:</label>
+        <select id="country" name="country" required>
+            <option value="">Select Country</option>
+            <option value="usa">USA</option>
+            <option value="uk">UK</option>
+            <option value="canada">Canada</option>
+            <!-- Add more countries here -->
+        </select>
+        <br>
+
+        <label for="terms">Agree to Terms:</label>
+        <input type="checkbox" id="terms" name="terms" required>
+        <label for="terms">I agree to the terms and conditions</label>
+        <br>
+
+        <input type="submit" value="Register">
+    </form>
+</body>
+</html>
+</xmp>
+<hr>
+<div class="pagebreak"></div>
+<h2>OUTPUT Practical (3)</h2>
+<h1>User Registration</h1>
+<form action="#" method="POST">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required>
+    <br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+    <br>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+    <br>
+
+    <label for="confirm-password">Confirm Password:</label>
+    <input type="password" id="confirm-password" name="confirm-password" required>
+    <br>
+
+    <label for="gender">Gender:</label>
+    <input type="radio" id="male" name="gender" value="male" required>
+    <label for="male">Male</label>
+    <input type="radio" id="female" name="gender" value="female" required>
+    <label for="female">Female</label>
+    <input type="radio" id="other" name="gender" value="other" required>
+    <label for="other">Other</label>
+    <br>
+
+    <label for="country">Country:</label>
+    <select id="country" name="country" required>
+        <option value="">Select Country</option>
+        <option value="usa">USA</option>
+        <option value="uk">UK</option>
+        <option value="canada">Canada</option>
+        <!-- Add more countries here -->
+    </select>
+    <br>
+
+    <label for="terms">Agree to Terms:</label>
+    <input type="checkbox" id="terms" name="terms" required>
+    <label for="terms">I agree to the terms and conditions</label>
+    <br>
+
+    <input type="submit" value="Register">
+</form>
+<hr>
+<div class="pagebreak"></div>
+<i>Remove a Specific table row using javascript</i>
+<h2>INPUT Practical (4)</h2>
+<xmp>
+    <!DOCTYPE html>
+<html>
+<head>
+    <title>Remove Table Row</title>
+</head>
+<body>
+    <h1>Sample Table</h1>
+    <table id="myTable">
+        <tbody>
+            <tr>
+                <td>Row 1, Cell 1</td>
+                <td>Row 1, Cell 2</td>
+            </tr>
+            <tr>
+                <td>Row 2, Cell 1</td>
+                <td>Row 2, Cell 2</td>
+            </tr>
+            <tr>
+                <td>Row 3, Cell 1</td>
+                <td>Row 3, Cell 2</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <button onclick="removeRow(1)">Remove Row 2</button>
+
+    <script>
+        function removeRow(rowIndex) {
+            var table = document.getElementById("myTable");
+            var tbody = table.getElementsByTagName("tbody")[0];
+            var rows = tbody.getElementsByTagName("tr");
+
+            // Check if the rowIndex is valid
+            if (rowIndex >= 0 && rowIndex < rows.length) {
+                // Remove the specific row
+                tbody.removeChild(rows[rowIndex]);
+            }
+        }
+    </script>
+</body>
+</html>
+
+</xmp>
+<hr>
+<div class="pagebreak"></div>
+<h2>OUTPUT Practical (4)</h2>
+<h1>Sample Table</h1>
+
+    <table id="myTable">
+        <tbody>
+            <tr>
+                <td>Row 1, Cell 1</td>
+                <td>Row 1, Cell 2</td>
+            </tr>
+            <tr>
+                <td>Row 2, Cell 1</td>
+                <td>Row 2, Cell 2</td>
+            </tr>
+            <tr>
+                <td>Row 3, Cell 1</td>
+                <td>Row 3, Cell 2</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <button onclick="removeRow(1)">Remove Row 2</button>
+
+    <script>
+        function removeRow(rowIndex) {
+            var table = document.getElementById("myTable");
+            var tbody = table.getElementsByTagName("tbody")[0];
+            var rows = tbody.getElementsByTagName("tr");
+
+            // Check if the rowIndex is valid
+            if (rowIndex >= 0 && rowIndex < rows.length) {
+                // Remove the specific row
+                tbody.removeChild(rows[rowIndex]);
+            }
+        }
+    </script>
+<hr>
+<div class="pagebreak"></div>
+<i>Button Events</i>
+<h2>INPUT Practical (5)</h2>
+<xmp>
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Button Events</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                text-align: center;
+            }
+    
+            button {
+                padding: 10px 20px;
+                font-size: 16px;
+                margin: 5px;
+                cursor: pointer;
+            }
+    
+            #message {
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Button Events</h1>
+        <button id="button1">Click Me</button>
+        <button id="button2">Mouse Over Me</button>
+        <button id="button3">Double Click Me</button>
+        <button id="button4">Submit Form</button>
+        <button id="button5">Key Press</button>
+    
+        <div id="message"></div>
+    
+        <script>
+            // Button 1 - Click Event
+            document.getElementById("button1").addEventListener("click", function() {
+                document.getElementById("message").innerHTML = "Button 1 Clicked!";
+            });
+    
+            // Button 2 - Mouse Over Event
+            document.getElementById("button2").addEventListener("mouseover", function() {
+                document.getElementById("message").innerHTML = "Mouse Over Button 2!";
+            });
+    
+            // Button 3 - Double Click Event
+            document.getElementById("button3").addEventListener("dblclick", function() {
+                document.getElementById("message").innerHTML = "Double Clicked Button 3!";
+            });
+    
+            // Button 4 - Submit Form Event
+            document.getElementById("button4").addEventListener("click", function() {
+                document.getElementById("message").innerHTML = "Form Submitted!";
+                // Add your form submission logic here
+            });
+    
+            // Button 5 - Key Press Event
+            document.getElementById("button5").addEventListener("keypress", function() {
+                document.getElementById("message").innerHTML = "Key Pressed!";
+            });
+        </script>
+    </body>
+    </html>
+    
+    </xmp>
+
+    <div class="pagebreak"></div>
+    <h2>OUTPUT Practical (5)</h2>
+    <h1>Button Events</h1>
+    <button id="button1">Click Me</button>
+    <button id="button2">Mouse Over Me</button>
+    <button id="button3">Double Click Me</button>
+    <button id="button4">Submit Form</button>
+    <button id="button5">Key Press</button>
+    <div id="message"></div>
+    <script>
+        // Button 1 - Click Event
+        document.getElementById("button1").addEventListener("click", function() {
+            document.getElementById("message").innerHTML = "Button 1 Clicked!";
+        });
+
+        // Button 2 - Mouse Over Event
+        document.getElementById("button2").addEventListener("mouseover", function() {
+            document.getElementById("message").innerHTML = "Mouse Over Button 2!";
+        });
+
+        // Button 3 - Double Click Event
+        document.getElementById("button3").addEventListener("dblclick", function() {
+            document.getElementById("message").innerHTML = "Double Clicked Button 3!";
+        });
+
+        // Button 4 - Submit Form Event
+        document.getElementById("button4").addEventListener("click", function() {
+            document.getElementById("message").innerHTML = "Form Submitted!";
+            // Add your form submission logic here
+        });
+
+        // Button 5 - Key Press Event
+        document.getElementById("button5").addEventListener("keypress", function() {
+            document.getElementById("message").innerHTML = "Key Pressed!";
+        });
+    </script>
+</body>
+</html>
