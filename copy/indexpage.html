@@ -27,6 +27,10 @@
                 <label for="exampleFormControlInput1" class="form-label">Class Roll Number </label>
                 <input type="tel" class="form-control" id="rollnumber" placeholder="220816">
               </div>
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Exam Roll Number </label>
+                <input type="tel" class="form-control" id="examRollnumber" placeholder="220816">
+              </div>
               <div class="mb-3"> 
                 <input type="submit" class="btn btn-dark" id="submit" value="Submit">
                 <h3>Made With ❤️ By Aamir Hussain </h3>
@@ -41,7 +45,7 @@ form.addEventListener('submit', (event) => {
     // stop form submission
     event.preventDefault();
     // console.log(form.elements)
-    const {name ,rollnumber}= form.elements;
+    const {name ,rollnumber, examRollnumber}= form.elements;
     
     let html =  `<div class="text-center py-2">
             <h1 class="text-center py-2">A</h1>
@@ -60,6 +64,7 @@ form.addEventListener('submit', (event) => {
               <h6>Submitted By:</h6>
               <p>Name:${name.value}</p>
               <p>Roll No.:${rollnumber.value}</p>
+              <p>Roll No.:${examRollnumber.value}</p>
             </div>
         </div>
         <div class="pagebreak"></div>
