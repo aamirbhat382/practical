@@ -13,7 +13,7 @@
     />
   </head>
   <body>
-    <div style="display: none;" class="card" id="card">
+    <div  class="card" id="card">
       <div class="card-header"></div>
       <div class="card-body text-center">
         <h5 class="card-title">
@@ -22,28 +22,20 @@
         <p class="card-text">👏 Show Appreciation to Your Buddy</p>
       </div>
       <div>
-        <a href="#/practical/indexpageskill.html" class="btn btn-primary"
+        <a href="/practical/indexpageskill.html" class="btn btn-success"
           >Generate SKILL Index Page</a
         >
-        <a href="#/practical/indexpage.html" class="btn btn-primary"
+        <a href="/practical/indexpage.html" class="btn btn-success"
           >Generate Applied Index Page</a
         >
-        <a href="#/practical/applied.html" class="btn btn-dark"
+        <a href="#/practical/applied.html" aria-disabled="true" class="btn disabled btn-dark"
           >Generate Applied Computing Practical</a
         >
-        <a href="#/practical/skill.html" class="btn btn-dark"
+        <a href="#/practical/skill.html" aria-disabled="true" class=" disabled btn btn-dark"
           >Generate Skill Practical</a
         >
       </div>
     </div>
-    <img id="img" src="https://media.tenor.com/z9uuXgxIem0AAAAd/prenk-its-a-prenk.gif" class="my-2 mx-2" />
-    <script>
-        let card = document.getElementById("card");
-        let img = document.getElementById("img");
-        img.addEventListener("click", () => {
-            card.style.display = "block";
-            // img.style.display = "none";
-        });
-    </script>
+   
   </body>
 </html>
